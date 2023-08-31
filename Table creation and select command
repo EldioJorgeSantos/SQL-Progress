@@ -1,0 +1,12 @@
+create table Products (
+product_id int primary key, low_fats varchar(1), recyclable varchar(1) 
+);
+insert into Products (product_id, low_fats, recyclable) values (0, "y", "n");
+insert into Products (product_id, low_fats, recyclable) values (1, "y", "y");
+insert into Products (product_id, low_fats, recyclable) values (2, "n", "y");
+insert into Products (product_id, low_fats, recyclable) values (3, "y", "y");
+insert into Products (product_id, low_fats, recyclable) values (4, "n", "n");
+select product_id from Products
+where low_fats = "y" and recyclable = "y";
+/*This piece of code creates a table and grabs the information necessary. In this case, it returns the id(s) of product(s) that are both low fat and recyclable.*/
+
