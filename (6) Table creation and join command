@@ -15,3 +15,7 @@ insert into Product (product_id, product_name) values (300, Samsung);
 select Sales.year, Sales.price, Product.product_name
 from sales
 inner join product on Sales.product_id = Product.product_id; 
+/*Join command is used to grab a resultset from more than one table at a time.
+Here 'inner join' appears to gather the rows of the different tables using a 
+column as a parameter. If there is a balance between the rows of the two tables, 
+the command will pull it off from the resultset.*/
