@@ -1,4 +1,4 @@
-create table Employee(
+create table Employee (
 impId int primary key,
 name varchar(15),
 supervisor int,
