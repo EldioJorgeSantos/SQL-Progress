@@ -13,5 +13,6 @@ from
     customer
 where referee_id <> 2 or referee_id is null;
 /*This piece of SQL query statement creates a new table. "id" shows the customers's id
-who were referred by other customers whose id's are represented in the "referee_id" column. "Name" column is linked to the "id" column.
+who were referred by other customers whose id's are represented in the "referee_id" column.
+"Name" column is linked to the "id" column.
 The select command grabs the name of the customer who were not referred by the customer of id 2.*/ 
