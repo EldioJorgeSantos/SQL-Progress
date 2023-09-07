@@ -1,0 +1,21 @@
+create table Employees (
+id int primary key, name varchar(15)
+);
+insert into Employees (id, name) values (1, Alice);
+insert into Employees (id, name) values (7, Bob);
+insert into Employees (id, name) values (11, Meir);
+insert into Employees (id, name) values (90, Winston);
+insert into Employees (id, name) values (3, Jonathan);
+
+create table EmployeeUNI (
+id int primary key, unique_id int
+);
+insert into EmployeeUNI (id, unique_id) values (3, 1);
+insert into EmployeeUNI (id, unique_id) values (11, 2);
+insert into EmployeeUNI (id, unique_id) values (90, 3);
+
+select e.name, u.unique_id
+from Employees as e
+left join EmployeeUNI as u
+on e.id = u.id;
+/*This one selects the name and the unique id's of the employess consulting information from 2 different tables*/
