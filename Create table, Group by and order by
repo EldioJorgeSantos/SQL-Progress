@@ -1,0 +1,36 @@
+create table Students (
+student_id int primary key, student_name varchar(15)
+);
+insert into Students (Student_id, student_name) values (1, Alice);
+insert into Students (Student_id, student_name) values (2, Bob);
+insert into Students (Student_id, student_name) values (13, John);
+insert into Students (Student_id, student_name) values (6, Alex);
+
+create table Subjects (
+subject_name varchar(15)
+);
+insert into Subjects (subject_name) values (Math, Physics, Programming);
+
+create table Examinations (
+student_id int primary key, subject_name varchar(15)
+);
+insert into Examinations (student_id, subject_name) values (1, Math);
+insert into Examinations (student_id, subject_name) values (1, Physics);
+insert into Examinations (student_id, subject_name) values (1, Programming);
+insert into Examinations (student_id, subject_name) values (2, Programming);
+insert into Examinations (student_id, subject_name) values (1, Physics);
+insert into Examinations (student_id, subject_name) values (1, Math);
+insert into Examinations (student_id, subject_name) values (13, Math);
+insert into Examinations (student_id, subject_name) values (13, Programming);
+insert into Examinations (student_id, subject_name) values (13, Physics);
+insert into Examinations (student_id, subject_name) values (2, Math);
+insert into Examinations (student_id, subject_name) values (1, Math);
+
+select s.Student_id, s.Student_name, u.Subject_name,
+count(e.subject_name) as attended_exams
+from Students as s
+join Subjects as u
+left join Examinations as e 
+on s.student_id = e.student_id and u.subject_name = e.subject_name
+group by s.student_id, u.subject_name 
+order by s.student_id, u.Subject_name;
