@@ -6,3 +6,5 @@ insert into Tweets (tweet_id, content) values (2, Let us make America great agai
 select tweet_id 
 from Tweets
 where char_length(content) > 15;
+/*Here a special function is used to pick the tweet_id whose content column 
+related has a 'string' data type less than 15 characters.*/
