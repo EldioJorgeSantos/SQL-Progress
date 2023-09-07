@@ -18,4 +18,5 @@ select e.name, u.unique_id
 from Employees as e
 left join EmployeeUNI as u
 on e.id = u.id;
-/*This one selects the name and the unique id's of the employess consulting information from 2 different tables*/
+/*This one selects the name and the unique id's of the
+employess consulting information from 2 different tables*/
