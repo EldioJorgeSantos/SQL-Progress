@@ -7,4 +7,4 @@ select tweet_id
 from Tweets
 where char_length(content) > 15;
 /*Here a special function is used to pick the tweet_id whose content column 
-related has a 'string' data type less than 15 characters.*/
+related has a 'string' data type more than 15 characters.*/
